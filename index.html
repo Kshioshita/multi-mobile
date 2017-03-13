@@ -1,0 +1,62 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <!-- to get rid of favicon request in console -->
+  <link rel="shortcut icon" href="">
+
+  <!-- P5 STUFF -->
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">
+  <!-- SOCKET STUFF -->
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+  <script type="text/javascript">
+    
+    /// SOCKET STUFF
+    var socket = io.connect();
+    
+    socket.on('connect', function() {
+      console.log("Connected");
+    });
+
+
+  </script>
+
+  <style> 
+  body {
+    padding: 0; 
+    margin: 0;
+    font-family: 'Short Stack', cursive;
+    background: url('background.png') top left fixed no-repeat;
+    background-size: cover;
+    text-align: center;
+    }
+  .container{
+    position:absolute;
+    z-index:5;
+    margin: 1.5em;
+  }
+  h1{
+    font-size: 5em;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      Help paint the house a different color by moving your phone!
+    </h1>
+  </div>
+</body>
+</html>
+
+<h1>
+  <p></p>
+  <p></p>
+  <p></p>
+</h1>
+
+
